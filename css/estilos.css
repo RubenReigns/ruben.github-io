@@ -1,0 +1,299 @@
+@charset="UTF-8";
+
+/* Página de Inicio */
+body{
+	background-color: #000;
+	flex-direction: row;
+	font-family: 'Reggae One', cursive;
+}
+
+section{
+	color: #fff;
+	padding-bottom: 100px;
+}
+
+.menu{
+	margin: 0 auto;
+	text-align: center;
+	background-color: #efeff2;
+	margin-top: 50px;
+	padding: 20px;
+	opacity: 0.8;
+	width: 60%;
+}
+
+.enlaces{
+	padding: 10px;
+	margin: 10px;
+	text-decoration: none;
+	border-radius: 15px;
+	text-align: center;
+	font-weight: 900px;
+	-webkit-text-stroke: 1px black;
+	font-size: 24px;
+	line-height : 30px;
+}
+
+a{
+	color: #a69eb0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00ff00;
+}
+
+a:visited {
+	color: #ff0000; 
+}
+
+a:active {
+	color: #FF0000;
+}
+
+#flotarizquierda{
+	float: left;
+	width: 50%;
+	/*margin-right: 30px;*/
+	font-size: 16px;
+}
+
+h1{
+	font-size: 56px;
+}
+
+h2{
+	width: 80%;
+	font-size: 36px;
+}
+
+hr{
+	width: 90%;
+}
+
+article{
+	padding: 15px;
+}
+
+#flotarderecha{
+	float: right;
+	width: 50%;
+}
+
+#fotoinicio{
+	width: 90%;
+	padding: 60px;
+	/*margin-top: 100px;*/
+
+}
+
+#fotoinicio:hover{
+	filter: opacity(0.5);
+}
+
+.seccionaudio{
+	text-align: center;
+	margin-top: 50px;
+}
+
+footer{
+	background-color: #fff;
+	color: #000;
+	clear: both;
+	flex-direction: row;
+	height: 150px;
+}
+
+#textofooter{
+	padding: 50px;
+	float: left;
+	font-size: large;
+}
+
+.fab{
+	font-size: xx-large;
+	margin-left: 150px;
+	padding: 50px;
+}
+
+
+/* CSS del Neón */
+h1 {
+  font-size: 9rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  to {
+    color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+
+/* Ejericio Tabla*/
+#seccion_Tablas{
+	margin: 0 auto;
+	display: flex;
+	margin-bottom: 400px;
+}
+
+table, th, td {
+  		border: 1px solid #fff;
+  	}
+
+.article_Tablas{
+	margin: 0 auto;
+}
+
+.fab{
+	color: #000;
+}
+
+
+/* Media Query */
+@media only screen and (min-width: 480px) {
+	section{
+		width: 80%;
+	}
+	
+	#flotarizquierda{
+		width: 40%;
+		font-size: 12px;
+		margin-left: 50px;
+	}
+	
+	#flotarderecha{
+		width: 40%;
+		font-size: 12px;
+		margin-left: -150px;
+	}
+	
+	#fotoinicio{
+		margin-top: 100px;
+		width: 100%;
+		margin-left: -150px;
+	}
+	
+	.menu{
+	width: 80%;
+	}
+	
+	h1{
+	font-size: 36px;
+	}
+	
+}
+@media only screen and (min-width: 768px) {
+	main > section{
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	#flotarizquierda{
+		width: 40%;
+		font-size: 12px;
+		margin-left: 50px;
+	}
+	
+	#flotarderecha{
+		width: 40%;
+		font-size: 12px;
+	}
+	
+	#fotoinicio{
+		margin-top: 100px;
+		width: 100%;
+		margin-left: -150px;
+	}
+	
+	h1{
+	font-size: 46px;
+	}
+	
+	h2{
+		font-size: 24px;
+	}
+	
+	.menu{
+	width: 80%;
+	}
+	
+	#textofooter{
+	margin-left: 30px;
+	padding: 20px;
+	float: left;
+	font-size: large;
+	}
+	
+	.fab{
+	font-size: xx-large;
+	margin-left: 50px;
+	padding: 30px;
+	}
+	
+	h1{
+	font-size: 56px;
+	}
+}
+@media only screen and (min-width: 1025px) {
+	section{
+		width: 80%;
+	}
+	
+	#flotarizquierda{
+		width: 40%;
+		font-size: 16px;
+		margin-left: 100px;
+	}
+	
+	#flotarderecha{
+		width: 40%;
+		font-size: 12px;
+	}
+	
+	#fotoinicio{
+		margin-top: 100px;
+		width: 100%;
+		margin-left: -200px;
+	}
+	
+	h2{
+		font-size: 36px;
+	}
+	
+	.menu{
+	width: 50%;
+	}
+	
+	footer{
+	background-color: #fff;
+	color: #000;
+	clear: both;
+	flex-direction: row;
+	height: 150px;
+	}
+
+	#textofooter{
+	margin-left: 500px;
+	padding: 50px;
+	float: left;
+	font-size: large;
+	}
+
+	.fab{
+	font-size: xx-large;
+	margin-left: 100px;
+	padding: 50px;
+	}
+
+	h1{
+	font-size: 56px;
+	}
+}

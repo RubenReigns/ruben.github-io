@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- MegaFormulario -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Rubén Sánchez González">
+		<!--Esto es para verlo bien en cualquier dispositivo móvil. -->
+		<meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0"> 
+		<!--Google Font-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<!-- Mi CSS -->
+		<link rel="stylesheet" type="text/css" href="css/formulario.css">
+		<title>Formulario Rambo II</title>
+	</head>
+	<body>
+		<main>
+			<h1 id="titulo_formulario">FORMULARIO</h1>
+			<img src="recursos/images/logo.png" alt="Foto Rambo"/>
+			<form method="post"> <!-- Etiqueta formulario con atributo post para mandar la información por separado -->
+				<p id="obligatotio">Los campos marcados con * son obligatorios.</p>
+				<fieldset>
+					<legend>Datos personales</legend>
+						<!-- Nombre -->
+						<label for="nombre"><p>Nombre:*<br/>
+							<input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$" required> <!-- input tipo text para rellenar, con el atributo required para rellenar obligatoriamente -->
+						</p></label>
+						<!-- Apellidos -->
+						<label for="apellido"><p>Apellido 1:*<br/>
+							<input type="text" name="apellidos" id="apellido" placeholder="Escriba su primer apellido" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$" required> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<label for="apellido2"><p>Apellido 2:<br/>
+							<input type="text" name="apellidos" id="apellido2" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$" placeholder="Escriba su segundo apellido"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- Sexo -->
+						<p>Sexo:*<br/>
+							<label><input type="radio" name="hm" value="h" required> Hombre</label><br/> <!-- input tipo radio que es un botón circular para marcar una opción u otra, no permite 2 opciones salvo que tengan nombres distintos -->
+							<label><input type="radio" name="hm" value="m" required> Mujer</label><br/> 
+						</p>
+						<!-- Edad --> 
+						<label for="edad">Edad:<br/>
+							<input type="number" name="edad" id="edad" required><br/> <!-- input tipo numero para que el usuario pueda seleciionar su edad-->
+						</label>
+						<!-- DNI -->
+						<label for="dni">DNI:*<br/>
+							<input type="text" name="dni" id="dni" placeholder="Escriba su DNI con letra" maxlength="9" pattern="^(\d{8})({A-Za-Z}(1))$" required> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</label>
+						<!-- Sangre -->
+						<p>Grupo sanguinéo:
+							<select name="sangre">  <!-- lista desplegable debe ir con el atributo option -->
+								<option value="0">...</option> <!-- atributo para definir los elementos de la lista desplegable -->
+								<option value="A+">A+</option>
+								<option value="A-">A-</option>
+								<option value="AB+">AB+</option>
+								<option value="AB-">AB-</option>
+								<option value="B+">B+</option>
+								<option value="B-">B-</option>			
+								<option value="0+">0+</option>
+								<option value="0-">0-</option>
+							</select>
+						</p>
+						<!-- Fecha registro -->
+						<label for="fecha"><p>Fecha de registro:*<br/>
+							<input type="date" name="fecha" id="fecha" required> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- Dirección -->
+						<label for="direccion"><p>Dirección:<br/>
+							<input type="text" name="direccion" id="direccion" placeholder="Escriba su dirección"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<label for="numero"><p>Número:<br/>
+							<input type="text" name="numero" id="numero" placeholder="Escriba el número"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<label for="piso"><p>Piso:<br/>
+							<input type="text" name="piso" id="piso" placeholder="Escriba su piso"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<label for="puerta"><p>Puerta:<br/>
+							<input type="text" name="puerta" id="puerta" placeholder="Escriba su puerta"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- Código postal -->
+						<label for="cp"><p>Código postal:*<br/>
+							<input type="text" name="cp" id="cp" placeholder="Escriba su código postal" maxlength="5" pattern="^\d{5}$" required> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- email -->
+						<label for="email"><p>Correo electronico:*<br/>
+							<input type="text" name="email" id="email" placeholder="Escriba su email" required> <!-- input tipo text para rellenar con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- teléfono -->
+						<label for="telefono"><p>Teléfono:*<br/>
+							<span>+34/</span>
+							<input type="tel" name="telf" pattern="\([0-9]{3}\) [0-9]{6}" id="telefono" placeholder="Escriba su número de teléfono" maxlength="9" required> <!-- input tipo text para rellenar con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- Pais -->
+						<label for="paisaescoger"><p>Pais:*</label><br/>
+							<select name="pais" id="paisAescoger" onchange="mostrar(this.value);">
+								<option value="vacio">...</option>
+								<option value="España">España</option>
+								<option value="Extranjero">Extranjero</option>
+							</select></p>
+						<!-- Provincias -->
+						<div id="provincia">
+							<label for="select">Provincias:</label>
+								<select name="provincias" id="select" required>  <!-- lista desplegable debe ir con el atributo option -->
+									<option value="0">...</option> <!-- atributo para definir los elementos de la lista desplegable -->
+									<option value="A Coruña">A Coruña</option>
+									<option value="Álava">Álava</option>
+									<option value="Albacete">Albacete</option>
+									<option value="Alicante">Alicante</option>
+									<option value="Almería">Almería</option>
+									<option value="Asturias">Asturias</option>
+									<option value="Badajoz">Badajoz</option>
+									<option value="Baleares">Baleares</option>						
+									<option value="Barcelona">Barcelona</option>
+									<option value="Burgos">Burgos</option>
+									<option value="Cáceres">Cáceres</option>
+									<option value="Cádiz">Cádiz</option>
+									<option value="Cantabria">Cantabria</option>
+									<option value="Castellón">Castellón</option>
+									<option value="Ciudad Real">Ciudad Real</option>
+									<option value="Córdoba">Córdoba</option>
+									<option value="Cuenca">Cuenca</option>
+									<option value="Gerona">Gerona</option>
+									<option value="Granada">Granada</option>
+									<option value="Guadalajara">Guadalajara</option>
+									<option value="Guipúzcoa">Guipúzcoa</option>
+									<option value="Huelva">Huelva</option>
+									<option value="Huesca">Huesca</option>
+									<option value="Jaén">Jaén</option>
+									<option value="La Rioja">La Rioja</option>
+									<option value="Las Palmas">Las Palmas</option>
+									<option value="León">León</option>
+									<option value="Lérida">Lérida</option>
+									<option value="Lugo">Lugo</option>
+									<option value="Madrid">Madrid</option>
+									<option value=" Málaga"> Málaga</option>
+									<option value="Murcia">Murcia</option>
+									<option value="Navarra">Navarra</option>
+									<option value="Ourense">Ourense</option>
+									<option value="Palencia">Palencia</option>
+									<option value="Pontevedra">Pontevedra</option>
+									<option value="Salamanca">Salamanca</option>
+									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+									<option value="Segovia">Segovia</option>
+									<option value="Sevilla">Sevilla</option>
+									<option value="Soria">Soria</option>
+									<option value="Tarragona">Tarragona</option>
+									<option value="Teruel">Teruel</option>
+									<option value="Toledo">Toledo</option>
+									<option value="Valencia">Valencia</option>
+									<option value="Valladolid">Valladolid</option>
+									<option value="Vizcaya">Vizcaya</option>
+									<option value="Zamora">Zamora</option>
+									<option value="Zaragoza">Zaragoza</option>
+								</select>
+						</div>						
+						<!-- Ciudad -->
+						<label for="ciudad"><p>Ciudad:*<br/>
+							<input type="text" name="ciudad" id="ciudad" placeholder="Introduce tu ciudad" required> <!-- input tipo text para rellenar, con el atributo required para rellenar obligatoriamente -->
+						</p></label>
+						<!-- Número S.S -->
+						<label for="ss"><p>Número S.S:<br/>
+							<input type="text" name="ss" id="ss"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- Contraseña -->
+						<label for="contraseña"><p>Contraseña:*<br/>
+							<input type="password" name="contraseña" id="contraseña" pattern=".{6,8}" title="La contraseña ha de tener entre 6 y 8 caracteres" required> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+						<!-- Cuenta bancaria -->
+						<label for="cuenta"><p>Cuenta bancaria:<br/>
+							<input type="text" name="iban" id="iban" pattern="^ES\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{2}|ES\d{20}$" placeholder="IBAN" title="El IBAN en España tiene 22 caracteres y empieza por ES" size="26"> <!-- input tipo text para rellenar, con el atributo placeholder para indicar en el campo lo que se tiene que rellenar -->
+						</p></label>
+				</fieldset>
+				<fieldset id="texto">
+					<!-- Política privacidad -->
+					<p>¿Acepta usted nuestra política de privacidad?*
+						<label><input type="checkbox" name="casilla" required>Si</label> <!-- input tipo checkbox que sn casillas de verificación -->
+						<label><input type="checkbox" name="casilla" required>No</label>
+					</p>
+					<!-- Condiciones de uso -->
+					<p>¿Acepta usted nuestras condiones de uso?*
+						<label><input type="checkbox" name="casilla" required>Si</label> <!-- input tipo checkbox que sn casillas de verificación -->
+						<label><input type="checkbox" name="casilla" required>No</label>
+					</p>
+					<!-- Tratamiento de datos -->
+					<p>¿Consiente el tratamiento de datos de este formulario?*
+						<label><input type="checkbox" name="casilla" required>Si</label> <!-- input tipo checkbox que sn casillas de verificación -->
+						<label><input type="checkbox" name="casilla" required>No</label>
+					</p>
+					
+					<!-- Insertar archivo -->
+					<input type="file" name="Insertar archivo"><br/>
+					<!-- Textarea -->
+					<textarea name="texto" rows="4" cols="20" placeholder="Escriba sus comentarios" maxlength="300" id="mensaje"></textarea><br/>
+					<div id="contador">0/300</div>
+				</fieldset>
+				<!-- Botón borrar -->
+				<div id="botones">
+					<input type="reset" value="Borrar"> <!-- input tipo botón que sirve para resturar el formulario original -->
+					<!-- Botón Enviar -->
+					<input type="submit" value="Enviar"> <!-- input tipo botón que sirve para enviar el formulario -->
+				</div>
+			</form>
+		</main>
+		<footer>
+			<p id="textofooter">Página realizada por <b><i>Rubén Sánchez González</i></b>. Alumno de DAW1b.</p>
+			<i class="fab fa-jedi-order"></i>
+		</footer>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+	</body>
+</html>

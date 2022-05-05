@@ -1,0 +1,269 @@
+/*-- MegaFormulario --*/
+body{
+	margin: 0 auto;
+	background-image: url("../recursos/images/rambo.png");
+	background-color: #fdff00;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; 
+	font-family: 'Reggae One', cursive;
+}
+
+img{
+	display: block;
+	margin: 0px auto;
+	max-width: 350px;
+	opacity: 0.9;
+}
+
+#titulo_formulario {
+	font-size: 3rem;
+	text-align: center;
+	margin: 0;
+	position: relative;
+	top: 100px;
+	z-index: 10;
+	text-shadow: -1px -1px 2px #595959;
+}
+
+form{
+	background-color: #800001; /*rojo*/
+	padding: 20px;
+	color: #000;
+	max-width: 350px;
+	margin: auto;
+	opacity: 0.9;
+	border-radius: 30px;
+	box-shadow: -1px -1px 2px #595959;
+	margin-bottom: 100px;
+}
+fieldset{
+	border: 5px solid #570509; /*rojo oscuro*/
+	padding: 10px;
+	
+}
+#texto{
+	margin-top: 10px;
+	border: 5px solid #fff;
+	padding: 10px;
+	margin-bottom: 20px;
+	
+}
+input[required] {
+	color: #000;
+	border: 3px solid #E60026; /*granate*/
+}
+legend{
+	font-size: xx-large;
+	font-weight: bold;
+	padding: 5px;
+	padding-bottom: 40px;
+}
+textarea{
+	margin-top: 10px;
+	min-width: 98%;
+	resize: none;
+}
+#botones{
+	text-align: center;
+}
+
+#botones input{
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+input,
+select {
+	box-shadow: -1px -1px 2px #595959;
+}
+
+#obligatotio{
+	color: #cc0606; /*rojo*/
+	text-align: center;
+}
+#provincia{
+	display: none;
+}
+
+/* Ejercicio Tabla */
+#mainTabla{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#articleTabla{
+	margin: 0 auto;
+}
+
+table, th, td {
+  		border: 1px solid #fff;
+}
+
+table{
+	margin: 0 auto;
+	margin-top: 50px;
+}
+footer{
+	background-color: #fff;
+	color: #000;
+	clear: both;
+	flex-direction: row;
+	height: 150px;
+}
+
+#textofooter{
+	padding: 50px;
+	float: left;
+	font-size: large;
+}
+
+.fab{
+	font-size: xx-large;
+	margin-left: 150px;
+	padding: 50px;
+}
+
+
+/* Media Query */
+@media only screen and (min-width: 480px) {
+	section{
+		width: 80%;
+	}
+	
+	#flotarizquierda{
+		width: 40%;
+		font-size: 12px;
+		margin-left: 50px;
+	}
+	
+	#flotarderecha{
+		width: 40%;
+		font-size: 12px;
+		margin-left: -150px;
+	}
+	
+	#fotoinicio{
+		margin-top: 100px;
+		width: 100%;
+		margin-left: -150px;
+	}
+	
+	.menu{
+	width: 80%;
+	}
+	
+	h1{
+	font-size: 36px;
+	}
+	
+}
+@media only screen and (min-width: 768px) {
+	main > section{
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	#flotarizquierda{
+		width: 40%;
+		font-size: 12px;
+		margin-left: 50px;
+	}
+	
+	#flotarderecha{
+		width: 40%;
+		font-size: 12px;
+	}
+	
+	#fotoinicio{
+		margin-top: 100px;
+		width: 100%;
+		margin-left: -150px;
+	}
+	
+	h1{
+	font-size: 46px;
+	}
+	
+	h2{
+		font-size: 24px;
+	}
+	
+	.menu{
+	width: 80%;
+	}
+	
+	#textofooter{
+	margin-left: 30px;
+	padding: 20px;
+	float: left;
+	font-size: large;
+	}
+	
+	.fab{
+	font-size: xx-large;
+	margin-left: 50px;
+	padding: 30px;
+	}
+	
+	h1{
+	font-size: 56px;
+	}
+}
+@media only screen and (min-width: 1025px) {
+	section{
+		width: 80%;
+	}
+	
+	#flotarizquierda{
+		width: 40%;
+		font-size: 16px;
+		margin-left: 100px;
+	}
+	
+	#flotarderecha{
+		width: 40%;
+		font-size: 12px;
+	}
+	
+	#fotoinicio{
+		margin-top: 100px;
+		width: 100%;
+		margin-left: -200px;
+	}
+	
+	h2{
+		font-size: 36px;
+	}
+	
+	.menu{
+	width: 50%;
+	}
+	
+	footer{
+	background-color: #fff;
+	color: #000;
+	clear: both;
+	flex-direction: row;
+	height: 150px;
+	}
+
+	#textofooter{
+	margin-left: 500px;
+	padding: 50px;
+	float: left;
+	font-size: large;
+	}
+
+	.fab{
+	font-size: xx-large;
+	margin-left: 100px;
+	padding: 50px;
+	}
+
+	h1{
+	font-size: 56px;
+	}
+}
